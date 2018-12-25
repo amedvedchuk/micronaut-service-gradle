@@ -6,15 +6,17 @@ import io.micronaut.http.client.RxHttpClient;
 import io.micronaut.runtime.server.EmbeddedServer;
 import org.junit.Test;
 
-
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Junit 4 test to show backward compatibility.
+ */
 public class HelloControllerTest {
 
     @Test
     public void testIndex() throws Exception {
-        try(EmbeddedServer server = ApplicationContext.run(EmbeddedServer.class)) {
-            try(RxHttpClient client = server.getApplicationContext().createBean(RxHttpClient.class, server.getURL())) {
+        try (EmbeddedServer server = ApplicationContext.run(EmbeddedServer.class)) {
+            try (RxHttpClient client = server.getApplicationContext().createBean(RxHttpClient.class, server.getURL())) {
                 assertEquals(HttpStatus.OK, client.toBlocking().exchange("/hello").status());
             }
         }

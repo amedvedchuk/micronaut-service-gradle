@@ -16,10 +16,10 @@ import org.junit.jupiter.api.Test;
 import javax.inject.Inject;
 
 /**
- *
+ * Test to display mocking service injected to Controller.
  */
 @MicronautTest
-public class ConverterContrllerMockTest {
+public class ConverterControllerMockTest {
 
     @Inject
     ConverterService converterService;

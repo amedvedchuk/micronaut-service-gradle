@@ -11,8 +11,11 @@ import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
 
+/**
+ * Test to display fully functional test without mocking.
+ */
 @MicronautTest
-public class ConverterContrllerTest {
+public class ConverterControllerTest {
 
     @Client("/")
     @Inject

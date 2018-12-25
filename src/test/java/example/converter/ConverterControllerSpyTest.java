@@ -15,10 +15,10 @@ import org.junit.jupiter.api.Test;
 import javax.inject.Inject;
 
 /**
- *
+ * Test to display Spy service injected to Controller.
  */
 @MicronautTest
-public class ConverterContrllerSpyTest {
+public class ConverterControllerSpyTest {
 
     @Inject
     ConverterService converterService;

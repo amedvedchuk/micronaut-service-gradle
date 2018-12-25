@@ -15,6 +15,9 @@ import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
 
+/**
+ * Test to display different HTTP client approaches.
+ */
 @MicronautTest
 class MathServiceInjectTest {
 
