@@ -3,17 +3,16 @@ package example.math;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+import lombok.RequiredArgsConstructor;
 
 /**
  *
  */
 @Controller("/math")
+@RequiredArgsConstructor
 public class MathController {
-    MathService mathService;
 
-    MathController(MathService mathService) {
-        this.mathService = mathService;
-    }
+    private final MathService mathService;
 
     @Get(uri = "/compute/{number}", processes = MediaType.TEXT_PLAIN)
     String compute(Integer number) {

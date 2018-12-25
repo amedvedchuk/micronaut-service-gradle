@@ -4,18 +4,13 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+import lombok.RequiredArgsConstructor;
 
-//@RequiredArgsConstructor
+@RequiredArgsConstructor
 @Controller("/test")
 public class ConverterController {
 
-//    private final ConverterService converterService;
-
-    ConverterService converterService;
-
-    public ConverterController(final ConverterService converterService) {
-        this.converterService = converterService;
-    }
+    private final ConverterService converterService;
 
     @Get("/")
     public HttpStatus index() {
